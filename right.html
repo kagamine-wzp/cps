@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="中国石油天然气集团公司是以油气业务､工程技术服务､石油工程建设､石油装备制造､金融服务､新能源开发等为主营业务的综合性国际能源公司能源公司." />
+    <meta name="keywords" content="石油,天然气,能源,油气勘探,中石油" />
+    <title>cps系统</title>
+    <link rel="stylesheet" type="text/css" href="css/try-base.css" />
+    <link href="css/dcalendar.picker.css" rel="stylesheet" />
+    <!--<link href="css/kindeditor.css" rel="stylesheet" />-->
+    <link rel="stylesheet" type="text/css" href="css/try-index.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/webuploader.js"></script>
+    <script src="laydate/laydate.js"></script>
+    <script src="editor/kindeditor-all-min.js"></script>
+    <script src="editor/lang/zh-CN.js"></script>
+</head>
+<body style="background: #f0f3fa;padding: 120px 6% 45px;position: relative;">
+<div id="shou" onclick="toggleMenu(this)"><img src="images/shou.png" onselectstart="return false;"></div>
+<div id="sec-nav" class="clearfix">
+    <div id="place"><span>当前位置： </span><a>系统设置</a> > <a>用户管理</a> > 用户列表</div>
+    <a id="sec-new">+ 添加</a>
+</div>
+<div id="content">
+    <div class="wrap">
+        <!--表格-->
+        <table class="table">
+            <thead>
+            <tr>
+                <th width="222">编号</th>
+                <th width="765">项目名称</th>
+                <th width="605">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td>成都悠湃思传媒有限责任公司</td>
+                <td>
+                    <a class="t-btn t-edit">编辑</a>
+                    <a class="t-btn t-dele">删除</a>
+                    <a class="t-btn t-look">查看</a>
+                    <a class="t-btn t-safe">授权</a>
+                    <a class="t-btn t-sh">审核</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!--下拉框-->
+        <div class="select">
+            <h2>下拉选项:</h2>
+            <div class="select-c">
+                <div class="select-result mr">
+                    请选择
+                </div>
+                <ul>
+                    <li>难度低</li>
+                    <li>难度一般</li>
+                    <li>难度高</li>
+                </ul>
+            </div>
+        </div>
+        <!--输入框-->
+        <div class="input">
+            <h2>下拉选项:</h2>
+            <div class="input-c">
+                <input type="text" placeholder="请填写项目名称">
+            </div>
+        </div>
+        <!--复选按钮-->
+        <div style="position: relative;">
+            <div class="check s-c">
+                <input type="checkbox" class="ca">
+                <label><i></i>全部</label>
+            </div>
+            <div class="check s-c">
+                <input type="checkbox" class="ca">
+                <label><i></i>全部</label>
+            </div>
+        </div>
+        <!--单选按钮-->
+        <div style="position: relative;">
+            <div class="check s-r">
+                <input type="radio" class="ca" name="type1">
+                <label><i></i>全部</label>
+            </div>
+            <div class="check s-r">
+                <input type="radio" class="ca" name="type1">
+                <label><i></i>全部</label>
+            </div>
+        </div>
+        <!--任务进度-->
+        <div class="rate">
+            <h2>任务进度</h2>
+            <h3>最近一次更新于     2018-08-16  18:23</h3>
+            <h4>55<span>%</span></h4>
+            <div class="rate-bar"><i></i></div>
+        </div>
+        <!--日历-->
+        <div class="date" style="width: 340px;">
+            <h2>日期:</h2>
+            <div class="layui-inline">
+                <input type="text" class="layui-input test-item" placeholder="请选择日期">
+            </div>
+        </div>
+        <div class="date-link">
+            <h2>日期:</h2>
+            <div class="clearfix">
+                <div class="layui-inline fl">
+                    <input type="text" class="layui-input test-item" placeholder="请选择日期">
+                </div>
+                <span class="date-line"></span>
+                <div class="layui-inline fl">
+                    <input type="text" class="layui-input test-item" placeholder="请选择日期">
+                </div>
+            </div>
+        </div>
+
+        <!--弹窗-->
+        <div class="alert alert-s">
+            <i></i>
+            <h3>恭喜您，提交成功！</h3>
+            <p>稍后请在项目列表里查看详情</p>
+            <div class="alert-b">
+                <a>确定</a>
+            </div>
+        </div>
+        <div class="alert alert-e">
+            <i></i>
+            <h3>糟糕，提交失败！</h3>
+            <p>您可以稍后重新操作</p>
+            <div class="alert-b">
+                <a>再次提交</a>
+            </div>
+        </div>
+        <div class="alert alert-c">
+            <h3>是否删除该附件？</h3>
+            <p>删除后不可恢复</p>
+            <div class="alert-b">
+                <a class="cancel">取消</a>
+                <a class="sure">确定</a>
+            </div>
+        </div>
+        <div class="alert alert-c">
+            <h3>是否删除该附件？</h3>
+            <p>删除后不可恢复</p>
+            <div class="alert-b">
+                <a class="cancel">取消</a>
+                <a class="sure disabled">确定</a>
+            </div>
+        </div>
+        <!--上传-->
+        <div style="width: 560px;">
+            <div id="uploader" class="wu-example clearfix">
+                <h2>上传附件:</h2>
+                <div class="btns">
+                    <div id="picker">点击此处上传附件</div>
+                    <!--<button id="ctlBtn">开始上传</button>-->
+                </div>
+                <div id="thelist" class="uploader-list"></div>
+            </div>
+        </div>
+        <!--编辑器-->
+        <div class="editor">
+            <h2>编辑器</h2>
+            <form>
+                <textarea id="editor_id" name="content" style="width:700px;height:300px;">
+                    &lt;strong&gt;HTML内容&lt;/strong&gt;
+                </textarea>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        //日期选择
+        lay('.test-item').each(function(){
+            laydate.render({
+                elem: this
+                ,trigger: 'click'
+                ,format: 'yyyy-MM-dd'
+            });
+        });
+
+        //编辑器
+        var editor;
+        KindEditor.ready(function(K) {
+            window.editor = K.create('#editor_id');
+        });
+        //下拉框
+        $('.select-c').click(function () {
+            $(this).toggleClass('open');
+        });
+        $('.select-c li').click(function () {
+            $(this).parents('ul').siblings('.select-result').html($(this).html()).removeClass('mr');
+        });
+    });
+    //收放菜单栏
+    function toggleMenu(n){
+        $(n).toggleClass('close');
+        frmBody = parent.document.getElementById('frame-body');
+        if (frmBody.cols == "329,*"){
+            frmBody.cols="0,*";
+        }else{
+            frmBody.cols="329,*";
+        }
+    };
+    //上传附件
+    // 添加全局站点信息
+    var BASE_URL = '/webuploader';
+    // 文件上传
+    jQuery(function() {
+        var $ = jQuery,
+            $list = $('#thelist'),
+            $btn = $('#ctlBtn'),
+            state = 'pending',
+            uploader;
+
+        uploader = WebUploader.create({
+            auto: true,
+            // 不压缩image
+            resize: false,
+
+            // swf文件路径
+            swf: BASE_URL + '/js/Uploader.swf',
+
+            // 文件接收服务端。
+            server: 'http://webuploader.duapp.com/server/fileupload.php',
+
+            // 选择文件的按钮。可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            pick: '#picker'
+        });
+
+        // 当有文件添加进来的时候
+        uploader.on( 'fileQueued', function( file ) {
+            var $li=$('<div id="' + file.id + '" class="item">' +
+                '<h4 class="info">' + file.name + '</h4>' +
+                '<p class="state" style="display: none;">等待上传...</p>' +
+                '<a class="state cancel">删除</a>' +
+                '</div>').appendTo( $list );
+            //$list.append(li);
+            $li.on( 'click', 'a.cancel', function() {
+                uploader.removeFile( file );
+                return;
+            });
+        });
+        uploader.on( 'fileDequeued', function( file ) {
+            var $li = $('#'+file.id);
+            $li.off().find('.file-panel').off().end().remove();
+        });
+        // 文件上传过程中创建进度条实时显示。
+        uploader.on( 'uploadProgress', function( file, percentage ) {
+            var $li = $( '#'+file.id ),
+                $percent = $li.find('.progress .progress-bar');
+
+            // 避免重复创建
+            if ( !$percent.length ) {
+                $percent = $('<div class="progress progress-striped active">' +
+                    '<div class="progress-bar" role="progressbar" style="width: 0%">' +
+                    '</div>' +
+                    '</div>').appendTo( $li ).find('.progress-bar');
+            }
+
+            $li.find('p.state').text('上传中');
+            $percent.css( 'width', percentage * 100 + '%' );
+        });
+
+        uploader.on( 'uploadSuccess', function( file ) {
+            $( '#'+file.id ).find('p.state').text('已上传');
+        });
+
+        uploader.on( 'uploadError', function( file ) {
+            //$( '#'+file.id ).find('p.state').text('上传出错');
+            var $li = $( '#'+file.id ),
+                $error = $li.find('div.error');
+
+            // 避免重复创建
+            if ( !$error.length ) {
+                $error = $('<div class="error"></div>').appendTo( $li );
+            }
+
+            $error.text('上传失败');
+        });
+
+        uploader.on( 'uploadComplete', function( file ) {
+            $( '#'+file.id ).find('.progress').fadeOut();
+        });
+
+        uploader.on( 'all', function( type ) {
+            if ( type === 'startUpload' ) {
+                state = 'uploading';
+            } else if ( type === 'stopUpload' ) {
+                state = 'paused';
+            } else if ( type === 'uploadFinished' ) {
+                state = 'done';
+            }
+
+            if ( state === 'uploading' ) {
+                $btn.text('暂停上传');
+            } else {
+                $btn.text('开始上传');
+            }
+        });
+
+        $btn.on( 'click', function() {
+            if ( state === 'uploading' ) {
+                uploader.stop();
+            } else {
+                uploader.upload();
+            }
+        });
+    });
+</script>
+</body>
+</html>

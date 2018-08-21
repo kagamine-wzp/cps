@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="中国石油天然气集团公司是以油气业务､工程技术服务､石油工程建设､石油装备制造､金融服务､新能源开发等为主营业务的综合性国际能源公司能源公司." />
+    <meta name="keywords" content="石油,天然气,能源,油气勘探,中石油" />
+    <title>cps系统</title>
+    <link rel="stylesheet" type="text/css" href="css/try-base.css" />
+    <link rel="stylesheet" type="text/css" href="css/try-index.css" />
+    <script src="js/jquery.min.js"></script>
+    <script>
+        var a=1;
+        var n;
+        $(function () {
+            $('#user>a').click(function () {
+                $('#user,#top-main').toggleClass('open');
+                setTimeout(function () {
+                    h();
+                },301)
+            });
+            h();
+            $(window).resize(function () {
+                h();
+            });
+            $('.top-next').click(function () {
+                if(!$(this).hasClass('disabled')){
+                    a++;
+                    if(a>=n){
+                        a=n;
+                        $('.top-next').addClass('disabled');
+                        $('.top-prev').removeClass('disabled');
+                    }else if(a!=1 && a<n){
+                        $('.top-next').removeClass('disabled');
+                        $('.top-prev').removeClass('disabled');
+                    }else if(a==1){
+                        $('.top-next').removeClass('disabled');
+                        $('.top-prev').addClass('disabled');
+                    }
+                    $('#top-main ul').css('margin-top',-((a-1)*82)+'px');
+                }
+            });
+            $('.top-prev').click(function () {
+                if(!$(this).hasClass('disabled')){
+                    a--;
+                    if(a<=1){
+                        a=1;
+                        $('.top-next').removeClass('disabled');
+                        $('.top-prev').addClass('disabled');
+                    }else if(a!=1 && a<n){
+                        $('.top-next').removeClass('disabled');
+                        $('.top-prev').removeClass('disabled');
+                    }
+                    $('#top-main ul').css('margin-top',-((a-1)*82)+'px');
+                }
+            });
+        });
+        function h() {
+            n=$('#top-main').height()/82;
+            $('#top-main ul').css('margin-top','0px');
+            $('.top-prev').addClass('disabled');
+            if(n==1){
+                $('.top-next').addClass('disabled')
+            }else{
+                $('.top-next').removeClass('disabled')
+            }
+        }
+    </script>
+</head>
+<body style="background: #5b8cff;">
+<div id="top">
+    <div id="logo"><img src="images/top.png"></div>
+    <div id="user">
+        <a><img src="images/user.png">麻花花</a>
+        <div id="user-wrap">
+            <div>
+                <a>修改密码</a>
+                <a>登录日志</a>
+                <a><img src="images/over.png"></a>
+            </div>
+        </div>
+    </div>
+    <div id="top-main">
+        <ul class="clearfix">
+            <li><a><img src="images/home.png">首页</a></li>
+            <li><a><img src="images/set.png">系统设置</a></li>
+            <li><a><img src="images/yy.png">运营管理</a></li>
+        </ul>
+        <div id="top-btn">
+            <a class="top-prev disabled"></a>
+            <a class="top-next"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

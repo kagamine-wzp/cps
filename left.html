@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="中国石油天然气集团公司是以油气业务､工程技术服务､石油工程建设､石油装备制造､金融服务､新能源开发等为主营业务的综合性国际能源公司能源公司." />
+    <meta name="keywords" content="石油,天然气,能源,油气勘探,中石油" />
+    <title>cps系统</title>
+    <link rel="stylesheet" type="text/css" href="css/try-base.css" />
+    <link rel="stylesheet" type="text/css" href="css/try-index.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/try-index.js"></script>
+    <script>
+        $(function () {
+            $('.menu>li>a').click(function () {
+                $(this).toggleClass('cur');
+                $(this).siblings().toggle();
+            });
+            $('.menu ul a').click(function () {
+                $('.menu ul a').removeClass('cur')
+                $(this).addClass('cur');
+            });
+        })
+    </script>
+</head>
+<body style="height: 100%;background: #f0f3fa;" onselectstart="return false;">
+<div id="nav">
+    <div id="nav-top">
+        <a>首页</a>
+    </div>
+    <ul class="menu">
+        <li>
+            <a class="cur"><i><img src="images/kegl.png"></i>客户管理</a>
+            <ul style="display: block">
+                <li><a class="cur">部门列表</a></li>
+                <li><a class="">添加部门</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class=""><i><img src="images/xmjd.png"></i>项目进度</a>
+            <ul style="display: none">
+                <li><a class="">账号列表</a></li>
+                <li><a class="">添加账号</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class=""><i><img src="images/gzrz.png"></i>工作日志</a>
+            <ul style="display: none">
+                <li><a class="">信息管理</a></li>
+                <li><a class="">采纳渠道</a></li>
+                <li><a class="">上报采纳</a></li>
+                <li><a class="">待办事项</a></li>
+                <li><a class="">发起报送</a></li>
+                <li><a class="">我的报送</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class=""><i><img src="images/khhf.png"></i>客户回访</a>
+            <ul style="display: none">
+                <li><a class="">角色列表</a></li>
+                <li><a class="">添加角色</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class=""><i><img src="images/hyxt.png"></i>会员系统</a>
+            <ul style="display: none">
+                <li><a class="">角色列表</a></li>
+                <li><a class="">添加角色</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

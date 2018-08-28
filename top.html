@@ -64,6 +64,9 @@
             }else{
                 $('.top-next').removeClass('disabled')
             }
+        };
+        function loginOut() {
+            window.parent.frames['mainFrame'].eval('loginOut()')
         }
     </script>
 </head>
@@ -76,7 +79,7 @@
             <div>
                 <a>修改密码</a>
                 <a>登录日志</a>
-                <a><img src="images/over.png"></a>
+                <a onclick="loginOut()"><img src="images/over.png"></a>
             </div>
         </div>
     </div>

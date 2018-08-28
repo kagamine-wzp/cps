@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/try-index.css" />
     <script src="js/jquery.min.js"></script>
     <script src="js/webuploader.js"></script>
+    <script src="layer/layer.js"></script>
     <script src="laydate/laydate.js"></script>
     <script src="editor/kindeditor-all-min.js"></script>
     <script src="editor/lang/zh-CN.js"></script>
@@ -179,7 +180,8 @@
             laydate.render({
                 elem: this
                 ,trigger: 'click'
-                ,format: 'yyyy-MM-dd'
+                ,format: 'yyyy-MM-dd',
+                showBottom: false
             });
         });
 
@@ -206,6 +208,12 @@
             frmBody.cols="329,*";
         }
     };
+    function loginOut() {
+        layer.confirm('确认退出吗？', function(){
+                window.parent.location='index.html'
+            }
+        )
+    }
     //上传附件
     // 添加全局站点信息
     var BASE_URL = '/webuploader';
